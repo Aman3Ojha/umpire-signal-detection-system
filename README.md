@@ -2,6 +2,9 @@
 
 An AI-powered, real-time cricket umpire signal detection system. Inspired by the academic paper *"Real-Time Umpire Signal Detection in Cricket: A Hybrid Deep Learning Solution"*, this project utilizes a hybrid approach combining spatial feature extraction (pose estimation) and temporal sequence modeling (LSTM) to classify actions dynamically.
 
+## 📊 Project Presentation
+* **[Umpire Signal Detection Presentation (PPTX)](./Umpire_Signal_Detection_Presentation.pptx)** — Widescreen technical slide deck detailing model architectures, features, and deployment configurations.
+
 ## 🌟 Features
 - **Real-Time Detection**: Analyzes live webcam feed to predict umpire signals instantly.
 - **Hybrid Architecture**: Uses Google's **MediaPipe Tasks API** for blazingly fast 33-point skeletal landmark extraction, coupled with a custom **TensorFlow/Keras LSTM** model for time-series action recognition.
