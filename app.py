@@ -1,5 +1,11 @@
 import streamlit as st
-import cv2
+try:
+    import cv2
+except ImportError:
+    import os
+    os.system("pip uninstall -y opencv-python opencv-contrib-python")
+    os.system("pip install opencv-python-headless opencv-contrib-python-headless")
+    import cv2
 import numpy as np
 import urllib.request
 import os
