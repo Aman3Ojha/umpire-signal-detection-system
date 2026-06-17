@@ -41,7 +41,10 @@ def load_detector():
 def load_keras_model():
     try:
         return load_model('umpire_model.keras')
-    except:
+    except Exception as e:
+        st.warning(f"Error loading Keras model: {str(e)}")
+        import traceback
+        st.code(traceback.format_exc())
         return None
 
 detector = load_detector()
