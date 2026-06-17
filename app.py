@@ -1,4 +1,8 @@
 import streamlit as st
+import mediapipe as mp
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
+
 try:
     import cv2
 except ImportError:
@@ -10,9 +14,6 @@ import numpy as np
 import urllib.request
 import os
 import tempfile
-import mediapipe as mp
-from mediapipe.tasks import python
-from mediapipe.tasks.python import vision
 from tensorflow.keras.models import load_model
 
 st.set_page_config(page_title="Umpire Signal Detection", layout="wide")
@@ -26,9 +27,15 @@ if not os.path.exists(model_path):
 
 @st.cache_resource
 def load_detector():
-    base_options = python.BaseOptions(model_asset_path=model_path)
-    options = vision.PoseLandmarkerOptions(base_options=base_options, output_segmentation_masks=False)
-    return vision.PoseLandmarker.create_from_options(options)
+    try:
+        base_options = python.BaseOptions(model_asset_path=model_path)
+        options = vision.PoseLandmarkerOptions(base_options=base_options, output_segmentation_masks=False)
+        return vision.PoseLandmarker.create_from_options(options)
+    except Exception as e:
+        st.error(f"Failed to load MediaPipe PoseLandmarker: {str(e)}")
+        import traceback
+        st.code(traceback.format_exc())
+        st.stop()
 
 @st.cache_resource
 def load_keras_model():
