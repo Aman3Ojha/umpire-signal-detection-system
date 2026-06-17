@@ -42,7 +42,7 @@ def load_keras_model():
     try:
         return load_model('umpire_model.keras')
     except Exception as e:
-        st.warning(f"Direct load failed: {str(e)}. Reconstructing model architecture...")
+        # Reconstruct silently to keep UI clean
         try:
             from tensorflow.keras.models import Sequential
             from tensorflow.keras.layers import LSTM, Dense, Dropout
@@ -61,7 +61,7 @@ def load_keras_model():
             rebuilt_model.load_weights('umpire_model.keras')
             return rebuilt_model
         except Exception as rebuild_err:
-            st.error(f"Model reconstruction failed: {str(rebuild_err)}")
+            st.error(f"Failed to load model: {str(rebuild_err)}")
             import traceback
             st.code(traceback.format_exc())
             return None
