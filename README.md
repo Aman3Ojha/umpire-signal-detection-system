@@ -69,3 +69,36 @@ streamlit run app.py
 ---
 
 *Note: On your first run, the system will automatically download a small `pose_landmarker_lite.task` model file (approx. 3MB) required by MediaPipe.*
+
+## 📚 Citation & References
+
+This project takes reference from the following research paper:
+
+```bibtex
+@article{kaur2025realtime,
+  title={Real-Time Umpire Signal Detection in Cricket: A Hybrid Deep Learning Solution},
+  author={Kaur, Baljinder and Rani, Diksha and Jayaprakash, Lithiga and Akshita and kaur, Ramneet and kumar, Aman and kumari, Shivani and kumar, Ansh},
+  journal={Journal of Information Systems Engineering and Management},
+  volume={10},
+  number={54s},
+  year={2025},
+  issn={2468-4376},
+  url={https://www.jisem-journal.com/}
+}
+```
+
+### Paper Metadata
+* **Title:** Real-Time Umpire Signal Detection in Cricket: A Hybrid Deep Learning Solution
+* **Journal:** *Journal of Information Systems Engineering and Management* (2025, 10(54s))
+* **e-ISSN:** 2468-4376
+* **Official Publisher URL:** [https://www.jisem-journal.com/](https://www.jisem-journal.com/)
+* **Authors:**
+  1. **Baljinder Kaur** (University Institute of Liberal Arts, Chandigarh University, Mohali, Punjab)
+  2. **Diksha Rani** (University Institute of Liberal Arts, Chandigarh University, Mohali, Punjab)
+  3. **Lithiga Jayaprakash** (AIT-CSE (AIML), Chandigarh University, Mohali, Punjab)
+  4. **Akshita** (AIT-CSE (AIML), Chandigarh University, Mohali, Punjab)
+  5. **Ramneet Kaur** (CSE, Chandigarh University, Mohali, Punjab)
+  6. **Aman Kumar** (CSE, Chandigarh University, Mohali, Punjab)
+  7. **Shivani Kumari** (CSE, Chandigarh University, Mohali, Punjab)
+  8. **Ansh Kumar** (CSE, Chandigarh University, Mohali, Punjab)
+
